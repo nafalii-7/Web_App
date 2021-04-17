@@ -7,7 +7,7 @@ st.title('suivi du covid 19 au maroc')
 
 st.cache(persist=True) 
 
-df = pd.read_csv(r'/Users/nafalismac/desktop/temp.py', encoding='ISO-8859-1',thousands='.', decimal=',', engine='python')
+df = pd.read_csv(r'/Users/nafalismac/desktop/heroku/temp.py', encoding='ISO-8859-1',thousands='.', decimal=',', engine='python')
 df.head()  
 df = df.set_index('date')
 
