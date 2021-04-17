@@ -47,5 +47,5 @@ print('\n \n personnes vaccinées dose 2 :', x[7],x[8],x[9])
     
 targetList_var = ([date, test_total, cas_confirmes, les_guerri , les_decede ,vaccination  ])
 
-with open('données_covid19.csv' , "a", encoding="utf-8") as f:
+with open('covid19_data.csv' , "a", encoding="utf-8") as f:
     f.write(str(targetList_var))
