@@ -7,8 +7,7 @@ st.title('suivi du covid 19 au maroc')
 
 st.cache(persist=True) 
 
-url = 'https://raw.githubusercontent.com/nafalii-7/Web_App/main/covid19_data.csv?token=ATGRFI3R6SEF5HIV3WGWDQLAPNHPU'
-df = pd.read_csv(url)
+df = pd.read_csv("https://raw.githubusercontent.com/nafalii-7/Web_App/main/covid19_data.csv?token=ATGRFI3R6SEF5HIV3WGWDQLAPNHPU")
 #df = pd.read_csv('https://raw.githubusercontent.com/nafalii-7/Web_App/main/covid19_data.csv', encoding='ISO-8859-1',thousands='.', decimal=',', engine='python')
 df.head()  
 df = df.set_index('date')
