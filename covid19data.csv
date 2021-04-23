@@ -1,4 +1,4 @@
-date,total_cases,new_cases,total_deaths,new_deaths,new_tests,total_tests,positive_rate,tests_per_case,people_vaccinated,people_fully_vaccinated,new_vaccinations
+Date,Cas confirmés,Nouveaux cas,Décès,Nouveaux décès,Nouveaux tests,Tests effectués,Taux positif,Tests par cas,Bénéficiaires de la vaccination,Personnes entièrement vaccinées,Nouveaux vaccinations
 2020-03-02,1,1,,,,29,,,,,
 2020-03-03,1,0,,,4,33,,,,,
 2020-03-04,1,0,,,2,35,,,,,
