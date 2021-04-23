@@ -33,9 +33,9 @@ if  votre_choix == "Suivi épidémiologique":
     
       colors = px.colors.qualitative.D3
       fig6 = go.Figure()
-      fig6.add_trace(go.Bar(y=df[["Nouveaux décès", "Cas confirmés", "Nouveaux tests"]].columns.tolist(),
-                             x=df[["Nouveaux décès", "Cas confirmés", "Nouveaux tests"]].sum().values,
-                             text=df[["Nouveaux décès", "Cas confirmés", "Nouveaux tests"]].sum().values,
+      fig6.add_trace(go.Bar(y=df[["Nouveaux deces", "Cas confirmes", "Nouveaux tests"]].columns.tolist(),
+                             x=df[["Nouveaux deces", "Cas confirmes", "Nouveaux tests"]].sum().values,
+                             text=df[["Nouveaux deces", "Cas confirmes", "Nouveaux tests"]].sum().values,
                              orientation='h',
                              marker=dict(color=[colors[1], colors[3], colors[2]]),
                              ),
@@ -65,23 +65,23 @@ if  votre_choix == "Suivi épidémiologique":
       col1, col2, col3 = st.beta_columns(3)
 
       with col1:
-           st.header("Tests effectués")
-           st.warning(df['Tests effectués'][df.index[-1]])
+           st.header("Tests effectues")
+           st.warning(df['Tests effectues'][df.index[-1]])
  
       with col2:
-           st.header("Cas confirmés")
-           st.success(df['Cas confirmés'][df.index[-1]])
+           st.header("Cas confirmes")
+           st.success(df['Cas confirmes'][df.index[-1]])
       with col3:
-           st.header("Décès")
+           st.header("Deces")
         
-           st.info( df['Décès'][df.index[-1]])
+           st.info( df['Deces'][df.index[-1]])
     
       st.write("\n")
       st.write("\n") 
       st.title("Visualisation des données quotidiennes" )
     
       all_columns_names= df.columns.tolist()
-      selected_column_names = st.multiselect("Choisir la(les) colonne(s) à dessiner dans le graphe",all_columns_names, default = ["Cas confirmés", "Décès"])
+      selected_column_names = st.multiselect("Choisir la(les) colonne(s) à dessiner dans le graphe",all_columns_names, default = ["Cas confirmes", "Déces"])
 
 
 
@@ -113,9 +113,9 @@ elif  votre_choix == "Données du jour":
            st.header("Nouveaux cas ")
            st.success(df['Nouveaux cas'][df.index[-1]])
     with col3:
-           st.header("Nouveaux déces")
+           st.header("Nouveaux deces")
         
-           st.info( df['Nouveaux décès'][df.index[-1]]) 
+           st.info( df['Nouveaux deces'][df.index[-1]]) 
       
 else:
     st.image("https://www.sante.gov.ma/PublishingImages/2021/vaccin%202021/vaccinfr-d.jpg?csf=1&e=ygzHDz")
@@ -129,7 +129,7 @@ else:
     st.write(df)
     
     y_options = [
-    "Nouveaux vaccinations","Personnes entièrement vaccinées","Bénéficiaires de la vaccination"
+    "Nouveaux vaccinations","Personnes entierement vaccinees","Beneficiaires de la vaccination"
     ]
 
     y_axis = st.selectbox('Quel graphe voulez vous?', y_options)
