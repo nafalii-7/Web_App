@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-st.title('Suivi du covid 19 au maroc')
+st.title('Suivi du Covid-19 au maroc')
 
 st.cache(persist=True) 
 
