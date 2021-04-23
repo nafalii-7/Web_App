@@ -65,15 +65,14 @@ if  votre_choix == "Suivi épidémiologique":
       col1, col2, col3 = st.beta_columns(3)
 
       with col1:
-           st.header("Tests effectues")
-           st.warning(df['Tests effectues'][df.index[-1]])
+           st.header("Cas confirmes")
+           st.warning(df['Cas confirmes'][df.index[-1]])
  
       with col2:
-           st.header("Cas confirmes")
-           st.success(df['Cas confirmes'][df.index[-1]])
+           st.header("Tests effectues")
+           st.success(df['Tests effectues'][df.index[-1]])
       with col3:
            st.header("Deces")
-        
            st.info( df['Deces'][df.index[-1]])
     
       st.write("\n")
@@ -81,7 +80,7 @@ if  votre_choix == "Suivi épidémiologique":
       st.title("Visualisation des données quotidiennes" )
     
       all_columns_names= df.columns.tolist()
-      selected_column_names = st.multiselect("Choisir la(les) colonne(s) à dessiner dans le graphe",all_columns_names, default = ["Cas confirmes", "Déces"])
+      selected_column_names = st.multiselect("Choisir la(les) colonne(s) à dessiner dans le graphe",all_columns_names, default = ["Cas confirmes", "Deces"])
 
 
 
