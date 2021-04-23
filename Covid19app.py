@@ -66,14 +66,14 @@ if  votre_choix == "Suivi épidémiologique":
 
       with col1:
            st.header("Cas confirmes")
-           st.warning(df['Cas confirmes'][df.index[-1]])
+           st.warning(df['Cas confirmes'][df.index[1]])
  
       with col2:
            st.header("Tests effectues")
-           st.success(df['Tests effectues'][df.index[-1]])
+           st.success(df['Tests effectues'][df.index[1]])
       with col3:
            st.header("Deces")
-           st.info( df['Deces'][df.index[-1]])
+           st.info( df['Deces'][df.index[1]])
     
       st.write("\n")
       st.write("\n") 
@@ -106,15 +106,15 @@ elif  votre_choix == "Données du jour":
 
     with col1:
            st.header("Nouveaux tests")
-           st.warning(df['Nouveaux tests'][df.index[-1]])
+           st.warning(df['Nouveaux tests'][df.index[1]])
  
     with col2:
            st.header("Nouveaux cas ")
-           st.success(df['Nouveaux cas'][df.index[-1]])
+           st.success(df['Nouveaux cas'][df.index[1]])
     with col3:
            st.header("Nouveaux deces")
         
-           st.info( df['Nouveaux deces'][df.index[-1]]) 
+           st.info( df['Nouveaux deces'][df.index[1]]) 
       
 else:
     st.image("https://www.sante.gov.ma/PublishingImages/2021/vaccin%202021/vaccinfr-d.jpg?csf=1&e=ygzHDz")
